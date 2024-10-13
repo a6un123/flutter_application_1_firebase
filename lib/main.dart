@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1_firebase/controller/loginscreen_controller.dart';
 import 'package:flutter_application_1_firebase/controller/regiscteration_screen_controller.dart';
 import 'package:flutter_application_1_firebase/firebase_options.dart';
-import 'package:flutter_application_1_firebase/view/splashscreen.dart';
+import 'package:flutter_application_1_firebase/view/splashscreen/splashscreen.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {

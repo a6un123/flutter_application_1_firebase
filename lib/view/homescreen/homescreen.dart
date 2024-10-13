@@ -45,6 +45,8 @@ class _HomescreenState extends State<Homescreen> {
                           children: [
                             InkWell(
                               onTap: () async {
+                                var uniquename = DateTime.now().microsecondsSinceEpoch.toString();
+                                print(uniquename);
                                 pickimageFile = await ImagePicker()
                                     .pickImage(source: ImageSource.camera);
                                 setState(() {});
@@ -53,7 +55,7 @@ class _HomescreenState extends State<Homescreen> {
                                       .ref(); // careate fire storage object
 
                                   Reference? folderRefferance = storageRef.child(
-                                      "imagepathe.jpg"); // create folder to store image
+                                      "$uniquename.jpg"); // create folder to store image
                                   await folderRefferance.putFile(File(
                                       pickimageFile!
                                           .path)); // store image in fire base
